@@ -60,9 +60,8 @@ plugins:
 author:
   name   : "Thom Pijnenburg"
   avatar : "/assets/images/profile.jpg"
-  bio    : "Machine Learning Specialist @ Elsevier.
-  With a fascination for discovering underlying patterns, Thom works on machine learning based
-solutions to Life Sciences problems. Interested in NLP, Knowledge Graphs and Machine Learning."
+  bio    : "Machine Learning Specialist @ Elsevier. With a fascination for discovering underlying patterns, Thom works on Machine Learning based
+solutions to problems in Science. Interested in NLP, Knowledge Graphs and Machine Learning."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
