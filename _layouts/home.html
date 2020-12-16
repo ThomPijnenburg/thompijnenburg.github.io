@@ -1,0 +1,30 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<!-- <h3 class="archive__subtitle">About</h3>
+<p>
+Hi there! This site contains
+With a masters degree in Theoretical Physics, experience as a researcher and software engineer, I am currently working as a Machine Learning Specialist at Elsevier Technology in Amsterdam.
+
+I graduated Cum Laude from my masters degree in Theoretical Physics at the University of Amsterdam, which included a Graduate Research Traineeship at McGill University. In my graduate thesis, I explore one of the most fundamental objects in physics: spacetime. There are signs that the universe is built up like a hologram where its spacetime can be reconstructed from the more fundamental quantum entanglement. This is known as emergent gravity, which is one of the striking results in the recent development in the field of Theoretical Physics.
+</p> -->
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.categories.news %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in site.categories.news %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
