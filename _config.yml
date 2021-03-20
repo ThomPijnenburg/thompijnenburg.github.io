@@ -77,6 +77,9 @@ author:
     - label: "Scholar"
       icon: "fas fa-fw fa-user-graduate"
       url: "https://scholar.google.com/citations?user=HZJF9hkAAAAJ&hl=en"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
+      url: "https://medium.com/@thompijnenburg"
 
 footer:
   links:
