@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "Thom Pijnenburg"
   avatar : "/assets/images/profile.jpg"
-  bio    : "Machine Learning Specialist @ Elsevier. Fascinated by discovering underlying patterns. Interested in NLP, Knowledge Graphs, Machine Learning and their application to Science."
+  bio    : "Senior Data Scientist @ Elsevier. Fascinated by discovering underlying patterns. Interested in NLP, Knowledge Graphs, Machine Learning and their application to Science."
   links:
     - label: "Amsterdam"
       icon: "fas fa-fw fa-map-marker-alt"
