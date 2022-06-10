@@ -16,4 +16,10 @@ var store = [{
         "tags": [],
         "url": "/news/ICMLA/",
         "teaser": null
+      },{
+        "title": "Talk @ KGC-HCLS 2022",
+        "excerpt":"We presented our work on EpiMap: Predicting Epigenetic Targets With Triage Queries and KG Embedding Models at the Healthcare and Life Sciences Symposium as part of the 2022 Knowledge Graph Conference (KGC). EpiMap: Predicting Epigenetic Targets With Triage Queries and KG Embedding Models Payal Mitra, Thom Pijnenburg &amp; Ted Slater...","categories": ["news"],
+        "tags": [],
+        "url": "/news/KGC-HCLS/",
+        "teaser": null
       }]

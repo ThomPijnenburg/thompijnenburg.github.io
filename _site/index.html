@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -77,22 +77,9 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
-<!--[if IE]>
-  <style>
-    /* old IE unsupported flexbox fixes */
-    .greedy-nav .site-title {
-      padding-right: 3em;
-    }
-    .greedy-nav button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-    }
-  </style>
-<![endif]-->
 
 
     <!-- start custom head snippets -->
@@ -105,17 +92,12 @@
 
   <body class="layout--home">
     <nav class="skip-links">
-  <h2 class="screen-reader-text">Skip links</h2>
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
     <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
   </ul>
 </nav>
-
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
 
     
 
@@ -172,22 +154,22 @@
   
 
 
-<div itemscope itemtype="https://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
     <div class="author__avatar">
-      
-        <img src="/assets/images/profile.jpg" alt="Thom Pijnenburg" itemprop="image">
-      
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/profile.jpg" alt="Thom Pijnenburg" itemprop="image" class="u-photo">
+      </a>
     </div>
   
 
   <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Thom Pijnenburg</a>
+    </h3>
     
-      <h3 class="author__name" itemprop="name">Thom Pijnenburg</h3>
-    
-    
-      <div class="author__bio" itemprop="description">
+      <div class="author__bio p-note" itemprop="description">
         <p>Senior Data Scientist @ Elsevier. Fascinated by discovering underlying patterns. Interested in NLP, Knowledge Graphs, Machine Learning and their application to Science.</p>
 
       </div>
@@ -202,27 +184,27 @@
       
         
           
-            <li><a href="#" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i><span class="label">Amsterdam</span></a></li>
+            <li><a href="#" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i><span class="label">Amsterdam</span></a></li>
           
         
           
-            <li><a href="https://thompijnenburg.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+            <li><a href="https://thompijnenburg.github.io" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
           
         
           
-            <li><a href="https://github.com/thompijnenburg" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+            <li><a href="https://github.com/thompijnenburg" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
           
         
           
-            <li><a href="https://www.linkedin.com/in/thom-pijnenburg/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.linkedin.com/in/thom-pijnenburg/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
           
-            <li><a href="https://scholar.google.com/citations?user=HZJF9hkAAAAJ&hl=en" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-user-graduate" aria-hidden="true"></i><span class="label">Scholar</span></a></li>
+            <li><a href="https://scholar.google.com/citations?user=HZJF9hkAAAAJ&hl=en" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-user-graduate" aria-hidden="true"></i><span class="label">Scholar</span></a></li>
           
         
           
-            <li><a href="https://medium.com/@thompijnenburg" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-medium" aria-hidden="true"></i><span class="label">Medium</span></a></li>
+            <li><a href="https://medium.com/@thompijnenburg" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-medium" aria-hidden="true"></i><span class="label">Medium</span></a></li>
           
         
       
@@ -277,7 +259,7 @@
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
@@ -295,13 +277,12 @@
     
       <h1 id="page-title" class="page__title">Welcome!</h1>
     
-    <p>I am currently working as a <code class="language-plaintext highlighter-rouge">Senior Data Scientist</code> at Elsevier in Amsterdam. I am part of the <a href="https://www.elsevier.com/solutions/entellect" target="_blank">Entellect</a> team where my team builds Machine Learning applications for the life sciences domain, and I am a lab member of Elsevier’s <a href="https://discoverylab.ai">Discovery Lab</a>.</p>
+    <p>I am currently working as a <code class="language-plaintext highlighter-rouge">Senior Data Scientist</code> at Elsevier in Amsterdam. I am part of the <a href="https://www.elsevier.com/solutions/entellect" target="_blank">Entellect</a> team where my team builds Machine Learning applications for the life sciences domain, and I am a lab member of Elsevier’s <a href="https://discoverylab.ai" target="_blank">Discovery Lab</a>.</p>
 
-<p>My interests and research are around Machine Learning, NLP and Knowledge Graphs and their application to science, for example in the domains life sciences or physics.</p>
+<p>My interests and research are around Machine Learning, NLP and Knowledge Graphs and their application to science, for example in life sciences or physics. My recent work is focused on graph machine learning and automatic KG construction from text.</p>
 
 <p>Previously, I obtained my masters degree Cum Laude in Theoretical Physics at the University of Amsterdam, including a Graduate Research Traineeship at McGill University. My graduate thesis explores one of the most fundamental objects in physics: spacetime. In string theory, the holographic principle supposes that the universe is built up like a hologram where spacetime can be reconstructed from the more fundamental quantum entanglement. This is known as emergent gravity, which is one of the striking results in the recent developments in Theoretical Physics.</p>
 
-<p>I write about AI, Tech and Science in this <a href="posts">blog</a>.</p>
 
 
 <!-- <h3 class="archive__subtitle">About</h3>
@@ -328,6 +309,52 @@ I graduated Cum Laude from my masters degree in Theoretical Physics at the Unive
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/news/KGC-HCLS/" rel="permalink">Talk @ KGC-HCLS 2022
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-05-02T20:00:00+01:00">May 2, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">We presented our work on EpiMap: Predicting Epigenetic Targets With Triage Queries and KG Embedding Models at the Healthcare and Life Sciences Symposium as p...</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/news/ICMLA/" rel="permalink">Paper @ ICMLA 2020
 </a>
       
@@ -340,7 +367,7 @@ I graduated Cum Laude from my masters degree in Theoretical Physics at the Unive
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2020-12-15T20:00:00+01:00">December 15, 2020</time>
+        <time datetime="2020-12-15T19:00:00+00:00">December 15, 2020</time>
       </span>
     
 
@@ -386,7 +413,7 @@ I graduated Cum Laude from my masters degree in Theoretical Physics at the Unive
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2020-02-07T01:00:00+01:00">February 7, 2020</time>
+        <time datetime="2020-02-07T00:00:00+00:00">February 7, 2020</time>
       </span>
     
 
@@ -432,7 +459,7 @@ I graduated Cum Laude from my masters degree in Theoretical Physics at the Unive
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2019-08-15T02:00:00+02:00">August 15, 2019</time>
+        <time datetime="2019-08-15T01:00:00+01:00">August 15, 2019</time>
       </span>
     
 
@@ -503,7 +530,7 @@ I graduated Cum Laude from my masters degree in Theoretical Physics at the Unive
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2021 Thom Pijnenburg. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2022 Thom Pijnenburg. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
